@@ -9,7 +9,7 @@ GAME RULES:
 
 */
 
-var scores, activePlayer, roundScore, isPlaying;
+var scores, activePlayer, roundScore, isPlaying, player1, player2;
 
 init()
 
@@ -93,8 +93,13 @@ function init() {
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
-    document.getElementById('name-0').textContent = 'Player 1';
-    document.getElementById('name-1').textContent = 'Player 2';
+
+    player1 = prompt("Hey Player 1! What is your name?", "Player 1");
+    player2 = prompt("Hey Player 2! What is your name?", "Player 2");
+
+
+    document.getElementById('name-0').textContent = player1;
+    document.getElementById('name-1').textContent = player2;
 
     document.querySelector('.player-0-panel').classList.remove('active');
     document.querySelector('.player-1-panel').classList.remove('active');
